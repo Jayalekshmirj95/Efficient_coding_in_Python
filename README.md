@@ -1,1 +1,1 @@
-# Things to be taken care of when writing python programs
+# Points to remember to improve the efficiency of python programs
