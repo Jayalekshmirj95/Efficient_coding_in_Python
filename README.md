@@ -8,3 +8,8 @@ So this is how we implemented this usecase. We first connect with bigquery in Py
 The program we write has to run for around 70000 customers, which means we have to generate invoices for these many customers. But first we can try one customer and if that is a success, we can scale the code. With that in mind, we ran the code for one customer and the execution time was around 60 minutes which absolutely is really bad. 
 So I tried some things and was able to reduce the execution time to just around 50 seconds for one customer, which is still not perfect but something. Before going into what did I do to achieve this I think it is worth mentioning how we can find the execution time of the code.
 
+There are many modules using which you can find the execution time of the code. The one that I used is the _time_ module. A sample code is below:
+![image](https://user-images.githubusercontent.com/82940730/152287999-523ea722-f858-4d11-84ba-76488be77088.png)
+
+
+
