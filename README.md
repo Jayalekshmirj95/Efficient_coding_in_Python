@@ -16,5 +16,7 @@ _time.time()_ gives you the time in seconds since epoch. The execution time here
 This was more of a _trial and achieve_ approach. We tried multiple things which I am going to list down. A word of caution, some of these may not necessarily work for your program, but there is no harm in trying them.
 1. Tuples are faster than lists\
 Tuples are stored in a single block of memory. Tuples are immutable so, It doesn't require extra space to store new objects. But in the case of lists, they are allocated in two blocks: the fixed one with all the Python object information and a variable sized block for the data. This is why tuples are faster than lists. So if you do not need to modify the elements afterwards it's better to go with tuples as a choice. 
-2. 
+2. Multiple assignments\
+When you want to initialize multiple variables try something like this in a single line:\
+a, b,c = 10, 20, 30
 
