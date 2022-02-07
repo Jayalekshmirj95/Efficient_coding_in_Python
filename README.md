@@ -29,7 +29,7 @@ If you have some strings to be concatenated, the best way to do it is to store t
 _join()_ is faster than + operation because + operator creates a new string and copies the content at each step but _join()_ does not do that.
 ### 5. Avoid dot operations
 We cannot avoid importing modules in Python, but what we can avoid is, importing the whole module(root module). For example, instead of importing math module, we can just import the required function from math module. Example below:\
-<img src= "https://user-images.githubusercontent.com/82940730/152732692-213f8f0c-e8dc-4085-9552-cb9ffca614c0.png" width='400' height='250'>\
+<img src= "https://user-images.githubusercontent.com/82940730/152732692-213f8f0c-e8dc-4085-9552-cb9ffca614c0.png" width='400' height='250'/>
 ### 6. Avoid loops
 Loops in python are time consuming, especially for loops. Try to avoid them. We can use _map()_ in some cases, example below:\
 <img src ="https://user-images.githubusercontent.com/82940730/152735356-809d79d8-90d3-4197-9d8d-ea1ef1583632.png" width='400' height='250'>\
