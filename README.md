@@ -33,7 +33,7 @@ We cannot avoid importing modules in Python, but what we can avoid is, importing
 6. Avoid loops\
 Loops in python are time consuming, especially for loops. Try to avoid them. We can use map() in some cases, example below:\
 <img src ="https://user-images.githubusercontent.com/82940730/152735356-809d79d8-90d3-4197-9d8d-ea1ef1583632.png" width='800' height='400'>\
-The map() returns a list of the results after applying the given function to each item of a given iterable (list, tuple etc.)
+The map() returns a list of the results after applying the given function to each item of a given iterable (list, tuple etc.)\
 Also it is worth trying while loops instead of for loops to reduce the execution time.
 
 
