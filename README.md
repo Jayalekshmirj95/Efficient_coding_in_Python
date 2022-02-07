@@ -25,8 +25,11 @@ You do not want to use any other technique if there is a possibility of using li
 You can see, the execution time has been reduced. It was just a simple program but think of what can it do for a very long program of say 2000 lines of code.
 4. Use joins when concatenating strings\
 If you have some strings to be concatenated, the best way to do it is to store the strings inside a list and then use the join() method to concatenate them. An example is given below:\
-<img src= "https://user-images.githubusercontent.com/82940730/152729930-fe8296ba-72c1-4fd7-b071-d7da849fc268.png" width='800' height='400'>\
-join() is faster than + operation because + operator creates a new string and copies the content at each step but join() does not do that.\
+<img src= "https://user-images.githubusercontent.com/82940730/152732113-11b91298-314f-4dad-8199-0b3e7160fbe1.png" width='800' height='400'>\
+join() is faster than + operation because + operator creates a new string and copies the content at each step but join() does not do that.
+5. Avoid dot operations\
+We cannot avoid importing modules in Python, but what we can avoid is, importing the whole module(root module). For example, instead of importing math module, we can just import the required function from math module. Example below:\
+
 
 
 
