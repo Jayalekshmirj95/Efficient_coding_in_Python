@@ -21,7 +21,7 @@ When you want to initialize multiple variables try something like this in a sing
 _a, b, c = 10, 20, 30_
 3. List comprehension\
 You do not want to use any other technique if there is a possibility of using list comprehension. An example is below:\
-<img src="https://user-images.githubusercontent.com/82940730/152291791-1bc87a07-7484-46a8-9703-ad5185fddfdc.png" width="600" height="400">\
+<img src="https://user-images.githubusercontent.com/82940730/152291791-1bc87a07-7484-46a8-9703-ad5185fddfdc.png" width="400" height="200">\
 You can see, the execution time has been reduced. It was just a simple program but think of what can it do for a very long program of say 2000 lines of code.
 4. Use joins when concatenating strings\
 If you have some strings to be concatenated, the best way to do it is to store the strings inside a list and then use the join() method to concatenate them. An example is given below:\
