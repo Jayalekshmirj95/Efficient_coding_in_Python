@@ -47,7 +47,7 @@ The _df.shape()_ stores the number of rows and columns of a pandas dataframe as 
 ### 9. Pandas: to_dict()
 You can use _to_dict()_ function in Pandas to convert the data frame to a dictionary. Iterating over a dictionary is comparatively very fast compared to _iterrows()_ function.
 Let's look at an example:\
-<img src="https://user-images.githubusercontent.com/82940730/152781158-478953b0-bc4c-4d88-a9a9-e2c90fc76edf.png" width='400' height='300'>\
+</img src="https://user-images.githubusercontent.com/82940730/152781158-478953b0-bc4c-4d88-a9a9-e2c90fc76edf.png" width='400' height='500'>\
 
 
 
