@@ -56,9 +56,9 @@ Here you are able to modify a column of the dataframe without even using a for l
 A package which efficiently applies any function to a pandas dataframe or series in the fastest available manner. You can install this package using the below line:\
 _pip install swifter_\
 After installing you can use it in the program to increase the efficiency of your code. A sample code is given below:\
-<img src="https://user-images.githubusercontent.com/82940730/152802439-11ea7266-e5fc-4fce-a3de-e220e8b704d0.png" width='400' height='400'/>\
+<img src="https://user-images.githubusercontent.com/82940730/152802439-11ea7266-e5fc-4fce-a3de-e220e8b704d0.png" width='600' height='250'/>\
 And the output is given below:\
-<img src="https://user-images.githubusercontent.com/82940730/152802779-5d478469-4cc1-4938-bd0d-b392b0043278.png" width='400' height='200'/>\
+<img src="https://user-images.githubusercontent.com/82940730/152802779-5d478469-4cc1-4938-bd0d-b392b0043278.png" width='200' height='200'/>\
 You can see the execution time has been reduced (the difference here is very small because I used a dataset which has only around 5k rows).
 
 
