@@ -23,6 +23,10 @@ _a, b, c = 10, 20, 30_
 You do not want to use any other technique if there is a possibility of using list comprehension. An example is below:\
 <img src="https://user-images.githubusercontent.com/82940730/152291791-1bc87a07-7484-46a8-9703-ad5185fddfdc.png" width="800" height="400">\
 You can see, the execution time has been reduced. It was just a simple program but think of what can it do for a very long program of say 2000 lines of code.
+4. Use joins when concatenating strings\
+If you have some strings to be concatenated, the best way to do it is to store the strings inside a list and then use the join() method to concatenate them. An example is given below:\
+<img src= "https://user-images.githubusercontent.com/82940730/152729930-fe8296ba-72c1-4fd7-b071-d7da849fc268.png" width='800' height='400'>\
+join() is faster than + operation because + operator creates a new string and copies the content at each step but join() does not do that.\
 
 
 
