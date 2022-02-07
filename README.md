@@ -29,6 +29,8 @@ If you have some strings to be concatenated, the best way to do it is to store t
 join() is faster than + operation because + operator creates a new string and copies the content at each step but join() does not do that.
 5. Avoid dot operations\
 We cannot avoid importing modules in Python, but what we can avoid is, importing the whole module(root module). For example, instead of importing math module, we can just import the required function from math module. Example below:\
+<img src= "https://user-images.githubusercontent.com/82940730/152732692-213f8f0c-e8dc-4085-9552-cb9ffca614c0.png" width='800' height='400'>\
+
 
 
 
