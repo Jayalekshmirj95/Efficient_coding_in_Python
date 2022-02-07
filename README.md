@@ -32,17 +32,17 @@ We cannot avoid importing modules in Python, but what we can avoid is, importing
 <img src= "https://user-images.githubusercontent.com/82940730/152732692-213f8f0c-e8dc-4085-9552-cb9ffca614c0.png" width='400' height='250'/>
 ### 6. Avoid loops
 Loops in python are time consuming, especially for loops. Try to avoid them. We can use _map()_ in some cases, example below:\
-<img src ="https://user-images.githubusercontent.com/82940730/152735356-809d79d8-90d3-4197-9d8d-ea1ef1583632.png" width='400' height='250'/>
+<img src ="https://user-images.githubusercontent.com/82940730/152735356-809d79d8-90d3-4197-9d8d-ea1ef1583632.png" width='400' height='250'/>\
 The _map()_ returns a list of the results after applying the given function to each item of a given iterable (list, tuple etc.)\
 Also it is worth trying while loops instead of for loops to reduce the execution time.
 ### 7. Pandas: iterrows()
 Pandas is one of the famous Python libraries, that are very efficient. But sometimes when it comes to larger datasets, it becomes slower to iterate over the records. There are some things we can try to make it more performant.\
 The _iterrows()_ is used to iterate over a pandas Data frame rows in the form of (index, series) pair. But this function is not recommended to use as it is slower and it does not preserve dtypes across the rows (dtypes are preserved across columns for DataFrames). Also you should never modify something you are iterating over. Depending on the data types, the iterator returns a copy and not a view, and writing to it will have no effect.\
-<img src='https://user-images.githubusercontent.com/82940730/152775678-3bf84598-434a-4c0c-a786-197115ef805d.png' width='400' height='250'/>
+<img src='https://user-images.githubusercontent.com/82940730/152775678-3bf84598-434a-4c0c-a786-197115ef805d.png' width='400' height='250'/>\
 Instead of using _iterrows()_, we have more efficient way to iterate over the rows of the dataframe which is using index.
 ### 8. Pandas: Iteration by index
 The rows and columns of the data frame are indexed, and you can loop over the indexes to iterate through the rows. An example is given below:\
-<img src="https://user-images.githubusercontent.com/82940730/152778425-372382eb-1f02-44b2-9392-17d5fe8569d3.png" width='400' height='250'/>
+<img src="https://user-images.githubusercontent.com/82940730/152778425-372382eb-1f02-44b2-9392-17d5fe8569d3.png" width='400' height='250'/>\
 The _df.shape()_ stores the number of rows and columns of a pandas dataframe as a tuple.
 ### 9. Pandas: to_dict()
 You can use _to_dict()_ function in Pandas to convert the data frame to a dictionary. Iterating over a dictionary is comparatively very fast compared to _iterrows()_ function.
@@ -50,7 +50,7 @@ Let's look at an example:\
 <img src="https://user-images.githubusercontent.com/82940730/152781158-478953b0-bc4c-4d88-a9a9-e2c90fc76edf.png" width='400' height='500'/>
 ### 10. Pandas: apply()
 It is a built-in function which can effectively be used to apply a function to each value of a pandas series.
-<img src="https://user-images.githubusercontent.com/82940730/152782631-d8ad55c8-824f-4d8c-b8a9-f28981cba792.png" width='400' height='500'/>
+<img src="https://user-images.githubusercontent.com/82940730/152782631-d8ad55c8-824f-4d8c-b8a9-f28981cba792.png" width='400' height='500'/>\
 Here we are able to modify a column of the dataframe without even using a for loop. 
 
 
