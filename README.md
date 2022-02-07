@@ -24,26 +24,26 @@ You do not want to use any other technique if there is a possibility of using li
 <img src="https://user-images.githubusercontent.com/82940730/152291791-1bc87a07-7484-46a8-9703-ad5185fddfdc.png" width="400" height="250">\
 You can see, the execution time has been reduced. It was just a simple program but think of what can it do for a very long program of say 2000 lines of code.
 ### 4. Use joins when concatenating strings
-If you have some strings to be concatenated, the best way to do it is to store the strings inside a list and then use the join() method to concatenate them. An example is given below:\
+If you have some strings to be concatenated, the best way to do it is to store the strings inside a list and then use the _join()_ method to concatenate them. An example is given below:\
 <img src= "https://user-images.githubusercontent.com/82940730/152732113-11b91298-314f-4dad-8199-0b3e7160fbe1.png" width='400' height='250'>\
-join() is faster than + operation because + operator creates a new string and copies the content at each step but join() does not do that.
+_join()_ is faster than + operation because + operator creates a new string and copies the content at each step but _join()_ does not do that.
 ### 5. Avoid dot operations
 We cannot avoid importing modules in Python, but what we can avoid is, importing the whole module(root module). For example, instead of importing math module, we can just import the required function from math module. Example below:\
 <img src= "https://user-images.githubusercontent.com/82940730/152732692-213f8f0c-e8dc-4085-9552-cb9ffca614c0.png" width='400' height='250'>\
 ### 6. Avoid loops
-Loops in python are time consuming, especially for loops. Try to avoid them. We can use map() in some cases, example below:\
+Loops in python are time consuming, especially for loops. Try to avoid them. We can use _map()_ in some cases, example below:\
 <img src ="https://user-images.githubusercontent.com/82940730/152735356-809d79d8-90d3-4197-9d8d-ea1ef1583632.png" width='400' height='250'>\
-The map() returns a list of the results after applying the given function to each item of a given iterable (list, tuple etc.)\
+The _map()_ returns a list of the results after applying the given function to each item of a given iterable (list, tuple etc.)\
 Also it is worth trying while loops instead of for loops to reduce the execution time.
 ### 7. Pandas: iterrows()
-Pandas is one of the famous Python libraries, that are very efficient. But sometimes when it comes to larger datasets, it becomes slower to iterate over the records. There are some things we can try to make more performant.\
-The iterrows() is used to iterate over a pandas Data frame rows in the form of (index, series) pair. But this function is not recommended to use as it is slower and it does not preserve dtypes across the rows (dtypes are preserved across columns for DataFrames). Also you should never modify something you are iterating over. Depending on the data types, the iterator returns a copy and not a view, and writing to it will have no effect.\
+Pandas is one of the famous Python libraries, that are very efficient. But sometimes when it comes to larger datasets, it becomes slower to iterate over the records. There are some things we can try to make it more performant.\
+The _iterrows()_ is used to iterate over a pandas Data frame rows in the form of (index, series) pair. But this function is not recommended to use as it is slower and it does not preserve dtypes across the rows (dtypes are preserved across columns for DataFrames). Also you should never modify something you are iterating over. Depending on the data types, the iterator returns a copy and not a view, and writing to it will have no effect.\
 <img src='https://user-images.githubusercontent.com/82940730/152775678-3bf84598-434a-4c0c-a786-197115ef805d.png' width='400' height='250'>\
-Instead of using iterrows(), we have more efficient way to iterate over the rows of the dataframe which is using index.
+Instead of using _iterrows()_, we have more efficient way to iterate over the rows of the dataframe which is using index.
 ### 8. Pandas: Iteration by index
 The rows and columns of the data frame are indexed, and you can loop over the indexes to iterate through the rows. An example is given below:\
 <img src="https://user-images.githubusercontent.com/82940730/152778425-372382eb-1f02-44b2-9392-17d5fe8569d3.png" width='400' height='250'>\
-The df.shape() stores the number of rows and columns of a pandas dataframe as a tuple.
+The _df.shape()_ stores the number of rows and columns of a pandas dataframe as a tuple.
 ### 9. Pandas: to_dict()
 
 
