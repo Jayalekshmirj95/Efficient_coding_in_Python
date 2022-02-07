@@ -35,6 +35,12 @@ Loops in python are time consuming, especially for loops. Try to avoid them. We 
 <img src ="https://user-images.githubusercontent.com/82940730/152735356-809d79d8-90d3-4197-9d8d-ea1ef1583632.png" width='800' height='400'>\
 The map() returns a list of the results after applying the given function to each item of a given iterable (list, tuple etc.)\
 Also it is worth trying while loops instead of for loops to reduce the execution time.
+7. Pandas tips
+Pandas is one of the famous Python libraries, that are very efficient. But sometimes when it comes to larger datasets, it becomes slower to iterate over the records. There are some things we can try to make more performant.\
+The iterrows() is used to iterate over a pandas Data frame rows in the form of (index, series) pair. But this function is not recommended to use as it is slower and it does not preserve dtypes across the rows (dtypes are preserved across columns for DataFrames). Also you should never modify something you are iterating over. Depending on the data types, the iterator returns a copy and not a view, and writing to it will have no effect. 
+<img src='https://user-images.githubusercontent.com/82940730/152775678-3bf84598-434a-4c0c-a786-197115ef805d.png' width='800' height='250'>
+
+Instead of using iterrows(), we have more efficient way to iterate over the rows of the dataframe which is using index.
 
 
 
