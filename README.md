@@ -62,9 +62,9 @@ And the output is given below:\
 You can see the execution time has been reduced (the difference here is very small because I used a dataset which has only around 5k rows).
 ### 12. Pandas: Vectorization
 We are getting to the last and most important part of this article, vectorization. In mathematics, a vector is something that has magnitude and direction. In programming and computer science, vectorization is the process of applying operations to an entire set of values at once. Vectorization is used to speed up the Python code without using loops. Using such a function can help in minimizing the running time of code efficiently. The built-in methods in NumPy and Pandas are built with C, which allows for vectorization. Vectorization almost always works faster as execution time is either constant, or grows at a much slower rate with a larger number of elements. Let's look at an example:\
-<img scr= "https://user-images.githubusercontent.com/82940730/154289206-b35a4231-4310-4975-a6af-583897a5b7e6.png" width='600' height='250'/>
+<img scr= "https://user-images.githubusercontent.com/82940730/154289206-b35a4231-4310-4975-a6af-583897a5b7e6.png" width='600' height='250'/>\
 Here line number 9 shows one form of vectorization. The output is as below:\
-<img scr="https://user-images.githubusercontent.com/82940730/154289989-66169bf5-8915-420a-9c1d-ca5fa2c43b73.png" width='400' height='50'/>
+<img scr="https://user-images.githubusercontent.com/82940730/154289989-66169bf5-8915-420a-9c1d-ca5fa2c43b73.png" width='400' height='50'/>\
 There are a lot of other ways to do it more efficiently.  
 
 
