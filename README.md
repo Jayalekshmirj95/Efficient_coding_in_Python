@@ -60,8 +60,8 @@ After installing you can use it in the program to increase the efficiency of you
 And the output is given below:\
 <img src="https://user-images.githubusercontent.com/82940730/152802779-5d478469-4cc1-4938-bd0d-b392b0043278.png" width='400' height='50'/>\
 You can see the execution time has been reduced (the difference here is very small because I used a dataset which has only around 5k rows).
-
-
+### 12. Pandas: Vectorization
+We are getting to the last and most important part of this article, vectorization. In mathematics, a vector is something that has magnitude and direction. In programming and computer science, vectorization is the process of applying operations to an entire set of values at once.
 
 
 
