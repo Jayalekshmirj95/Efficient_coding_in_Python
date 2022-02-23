@@ -70,6 +70,10 @@ We have _numpy.where()_ which can be used effectively to vectorize if-else condi
 _numpy.where(condition, value/operation if true, value/operation if false)_\
 This is an example:\
 <img src="https://user-images.githubusercontent.com/82940730/155305796-769b594e-6c46-420f-8bf9-33cccfbe808a.png" width='700' height='50'/>\
+If you have multiple if-else conditions in your function, it is always possible to use multilple _numpy.where()_ functions in your code. _numpy.select()_ is another function which comes in handy. An example below:\
+<img src='https://user-images.githubusercontent.com/82940730/155307981-bac820c2-c270-4eeb-8a67-4f55006168a7.png' width='600' height='250'/>
+
+
 
 
 
