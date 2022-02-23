@@ -10,7 +10,8 @@ So we tried some things and was able to reduce the execution time to just around
 
 There are many modules using which you can find the execution time of the code. The one that I used is the _time_ module. A sample code and its output are shown below:
 
-<img src="https://user-images.githubusercontent.com/82940730/152287999-523ea722-f858-4d11-84ba-76488be77088.png" width="400" height="200"/>\
+<img src="https://user-images.githubusercontent.com/82940730/152287999-523ea722-f858-4d11-84ba-76488be77088.png" width="400" height="200"/>
+
 _time.time()_ gives you the time in seconds since epoch. The execution time here is 0.0006 seconds.
 
 ## How did we reduce the execution time of the project code
