@@ -1,7 +1,7 @@
 # How to improve the efficiency of your python program
 Hi, I am going to take you through some of the things you can simply do to increase the efficiency of your python program. As you read through this, you will understand these are all basic things we often ignore or forget to implement even though we are aware of them.
 
-Let me first explain a little bit about the project that we are working on. So PDQ is a company that has two software products- PDQ Deploy & PDQ Inventory. They sell licenses to their customers to use these products for the alloacted time. Our task is to create a table which contains all the historical invoices starting from January 2017. We have around 7 source tables that we can use to create the resultant table called Invoices. BigQuery is the platform where PDQ has stored these tables for now. From there we can get the data using Python to connect with BigQuery and then do the processing and manipulations to get the final output.
+Let me first explain a little bit about the project that we are working on. So PDQ is a company that has two software products- PDQ Deploy & PDQ Inventory. They sell licenses to their customers to use these products for the allocated period of time. Our task is to create a table which contains all the historical invoices starting from January 2017. We have around 7 source tables that we can use to create the resultant table called Invoices. BigQuery is the platform where PDQ has stored these tables for now. From there we can get the data using Python to connect with BigQuery and then do the processing and manipulations to get the final output.
 
 ## How did we find out the code execution time is becoming a problem
 So this is how we implemented this usecase. We first connect with bigquery in Python, and do some queries to pull the data out from bigquery database and then do the manipulations using Pandas dataframe operations. As part of the task, we had to join different tables and did the joining conditions in Python too which at the end I realized was a mistake.\
@@ -65,13 +65,19 @@ We are getting to the last and most important part of this article, vectorizatio
 <img src= "https://user-images.githubusercontent.com/82940730/155304285-047b7c82-2905-4b0b-aef3-1037dfc00b5b.png" width='600' height='250'/>\
 Here line number 11 shows one form of vectorization. The output is as below:\
 <img src="https://user-images.githubusercontent.com/82940730/155304456-581c2bcd-5109-4a19-81b3-bbae550a1fd1.png" width='400' height='50'/>\
-There are a lot of other ways to do it more efficiently.\
+There are a lot of other ways to do it more efficiently. Numpy is a C implementation of arrays in Python that is comparatively faster while having the same Python interpreter.
 We have _numpy.where()_ which can be used effectively to vectorize if-else conditions. Syntax given below:\
 _numpy.where(condition, value/operation if true, value/operation if false)_\
 This is an example:\
 <img src="https://user-images.githubusercontent.com/82940730/155305796-769b594e-6c46-420f-8bf9-33cccfbe808a.png" width='700' height='50'/>\
 If you have multiple if-else conditions in your function, it is always possible to use multilple _numpy.where()_ functions in your code. _numpy.select()_ is another function which comes in handy. An example below:\
-<img src='https://user-images.githubusercontent.com/82940730/155307981-bac820c2-c270-4eeb-8a67-4f55006168a7.png' width='600' height='250'/>
+<img src='https://user-images.githubusercontent.com/82940730/155307981-bac820c2-c270-4eeb-8a67-4f55006168a7.png' width='600' height='250'/>\
+Another function worth exploring is _numpy.vectorize()_.This function takes in a python function (pyfunc) and returns a vectorized version of the function. Syntax below:\
+_numpy.vectorize(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None)_\
+
+Coming to the conclusion, we used most of these tricks to reduce the execution time of the code but what changed the execution time from 50 seconds for one customer to just 1 minute for 70000 customer is, transferring most of the logic into bigquery side. So earlier we were pulling all the data from bigquery database using _simple SQL queries_ and then doing all the manipulation logic in python using Pandas. But when most of the logic is transferred into the _SQL queries_, the overall code became so much more efficient because now the heavy lifting is done in bigquery which is a cloud platform. Hence, it is always preferrable to do the same first if at all possible and then try the above steps if needed.
+
+
 
 
 
