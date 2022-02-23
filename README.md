@@ -29,7 +29,7 @@ If you have some strings to be concatenated, the best way to do it is to store t
 _join()_ is faster than + operation because + operator creates a new string and copies the content at each step but _join()_ does not do that.
 ### 5. Avoid dot operations
 We cannot avoid importing modules in Python, but what we can avoid is, importing the whole module(root module). For example, instead of importing math module, we can just import the required function from math module. Example below:\
-<img src= "https://user-images.githubusercontent.com/82940730/152732692-213f8f0c-e8dc-4085-9552-cb9ffca614c0.png" width='400' height='250'/>\
+<img src= "https://user-images.githubusercontent.com/82940730/152732692-213f8f0c-e8dc-4085-9552-cb9ffca614c0.png" width='400' height='250'/>
 ### 6. Avoid loops
 Loops in python are time consuming, especially for loops. Try to avoid them. We can use _map()_ in some cases, example below:\
 <img src ="https://user-images.githubusercontent.com/82940730/152735356-809d79d8-90d3-4197-9d8d-ea1ef1583632.png" width='400' height='250'/>\
@@ -47,7 +47,7 @@ The _df.shape()_ stores the number of rows and columns of a pandas dataframe as 
 ### 9. Pandas: to_dict()
 You can use _to_dict()_ function in Pandas to convert the data frame to a dictionary. Iterating over a dictionary is comparatively very fast compared to _iterrows()_ function.
 Let's look at an example:\
-<img src="https://user-images.githubusercontent.com/82940730/152781158-478953b0-bc4c-4d88-a9a9-e2c90fc76edf.png" width='400' height='500'/>\
+<img src="https://user-images.githubusercontent.com/82940730/152781158-478953b0-bc4c-4d88-a9a9-e2c90fc76edf.png" width='400' height='500'/>
 ### 10. Pandas: apply()
 It is a built-in function which can effectively be used to apply a function to each value of a pandas series.
 <img src="https://user-images.githubusercontent.com/82940730/152782631-d8ad55c8-824f-4d8c-b8a9-f28981cba792.png" width='400' height='250'/>\
@@ -73,8 +73,7 @@ This is an example:\
 If you have multiple if-else conditions in your function, it is always possible to use multilple _numpy.where()_ functions in your code. _numpy.select()_ is another function which comes in handy. An example below:\
 <img src='https://user-images.githubusercontent.com/82940730/155307981-bac820c2-c270-4eeb-8a67-4f55006168a7.png' width='600' height='250'/>\
 Another function worth exploring is _numpy.vectorize()_.This function takes in a python function (pyfunc) and returns a vectorized version of the function. Syntax below:\
-_numpy.vectorize(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None)_\
-
+_numpy.vectorize(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None)_
 Coming to the conclusion, we used most of these tricks to reduce the execution time of the code but what changed the execution time from 50 seconds for one customer to just 1 minute for 70000 customer is, transferring most of the logic into bigquery side. So earlier we were pulling all the data from bigquery database using _simple SQL queries_ and then doing all the manipulation logic in python using Pandas. But when most of the logic is transferred into the _SQL queries_, the overall code became so much more efficient because now the heavy lifting is done in bigquery which is a cloud platform. Hence, it is always preferrable to do the same first if at all possible and then try the above steps if needed.
 
 
