@@ -8,7 +8,8 @@ So this is how we implemented this usecase: we first connected with bigquery in 
 The program we wrote had to run for around 70000 customers, which means we had to generate invoices for these many customers. But first we decided to try the code for one customer and if that was a success, we could scale the code. With that in mind, we ran the code for one customer and the execution time was around 60 minutes which absolutely is really bad. 
 So we tried some things and was able to reduce the execution time to just around 50 seconds for one customer, which was still not perfect but something. Before going into what did we do to achieve this I think it is worth mentioning how we can find the execution time of the code.
 
-There are many modules using which you can find the execution time of the code. The one that I used is the _time_ module. A sample code and its output are shown below:\
+There are many modules using which you can find the execution time of the code. The one that I used is the _time_ module. A sample code and its output are shown below:
+
 <img src="https://user-images.githubusercontent.com/82940730/152287999-523ea722-f858-4d11-84ba-76488be77088.png" width="400" height="300"/>\
 _time.time()_ gives you the time in seconds since epoch. The execution time here is 0.0006 seconds.
 
@@ -20,7 +21,7 @@ Tuples are stored in a single block of memory. Tuples are immutable so, It doesn
 When you want to initialize multiple variables try something like this in a single line:\
 _a, b, c = 10, 20, 30_
 ### 3. List comprehension
-You do not want to use any other technique if there is a possibility of using list comprehension. An example is below:\
+You do not want to use any other technique if there is a possibility of using list comprehension. An example is below:
 
 <img src="https://user-images.githubusercontent.com/82940730/152291791-1bc87a07-7484-46a8-9703-ad5185fddfdc.png" width="400" height="300"/>\
 You can see, the execution time has been reduced. It was just a simple program but think of what can it do for a very long program of say 2000 lines of code.
