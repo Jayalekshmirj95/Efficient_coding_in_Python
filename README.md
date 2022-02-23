@@ -69,7 +69,7 @@ There are a lot of other ways to do it more efficiently.\
 We have _numpy.where()_ which can be used effectively to vectorize if-else conditions. Syntax given below:\
 _numpy.where(condition, value/operation if true, value/operation if false)_\
 This is an example:\
-<img src="https://user-images.githubusercontent.com/82940730/155305796-769b594e-6c46-420f-8bf9-33cccfbe808a.png" width=400, height='50'/>\
+<img src="https://user-images.githubusercontent.com/82940730/155305796-769b594e-6c46-420f-8bf9-33cccfbe808a.png" width=400, height='100'/>\
 
 
 
