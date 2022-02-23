@@ -65,7 +65,11 @@ We are getting to the last and most important part of this article, vectorizatio
 <img src= "https://user-images.githubusercontent.com/82940730/155304285-047b7c82-2905-4b0b-aef3-1037dfc00b5b.png" width='600' height='250'/>\
 Here line number 11 shows one form of vectorization. The output is as below:\
 <img src="https://user-images.githubusercontent.com/82940730/155304456-581c2bcd-5109-4a19-81b3-bbae550a1fd1.png" width='400' height='50'/>\
-There are a lot of other ways to do it more efficiently.  
+There are a lot of other ways to do it more efficiently.\
+We have _numpy.where()_ which can be used effectively to vectorize if-else conditions. Syntax given below:\
+_numpy.where(condition, value/operation if true, value/operation if false)_\
+This is an example:\
+<img src="https://user-images.githubusercontent.com/82940730/155305796-769b594e-6c46-420f-8bf9-33cccfbe808a.png" width=400, height='50'/>\
 
 
 
