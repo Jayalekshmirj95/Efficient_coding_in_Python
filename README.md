@@ -74,6 +74,7 @@ If you have multiple if-else conditions in your function, it is always possible 
 <img src='https://user-images.githubusercontent.com/82940730/155307981-bac820c2-c270-4eeb-8a67-4f55006168a7.png' width='600' height='250'/>\
 Another function worth exploring is _numpy.vectorize()_.This function takes in a python function (pyfunc) and returns a vectorized version of the function. Syntax below:\
 _numpy.vectorize(pyfunc, otypes=None, doc=None, excluded=None, cache=False, signature=None)_
+
 Coming to the conclusion, we used most of these tricks to reduce the execution time of the code but what changed the execution time from 50 seconds for one customer to just 1 minute for 70000 customer is, transferring most of the logic into bigquery side. So earlier we were pulling all the data from bigquery database using _simple SQL queries_ and then doing all the manipulation logic in python using Pandas. But when most of the logic is transferred into the _SQL queries_, the overall code became so much more efficient because now the heavy lifting is done in bigquery which is a cloud platform. Hence, it is always preferrable to do the same first if at all possible and then try the above steps if needed.
 
 
