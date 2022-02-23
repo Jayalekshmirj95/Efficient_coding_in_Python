@@ -37,6 +37,7 @@ _join()_ is faster than + operation because + operator creates a new string and 
 We cannot avoid importing modules in Python, but what we can avoid is, importing the whole module(root module). For example, instead of importing math module, we can just import the required function from math module. Example below:
 
 <img src= "https://user-images.githubusercontent.com/82940730/152732692-213f8f0c-e8dc-4085-9552-cb9ffca614c0.png" width='400' height='300'/>
+
 ### 6. Avoid loops
 Loops in python are time consuming, especially for loops. Try to avoid them. We can use _map()_ in some cases, example below:
 
