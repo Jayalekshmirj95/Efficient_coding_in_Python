@@ -62,6 +62,7 @@ You can use _to_dict()_ function in Pandas to convert the data frame to a dictio
 Let's look at an example:
 
 <img src="https://user-images.githubusercontent.com/82940730/152781158-478953b0-bc4c-4d88-a9a9-e2c90fc76edf.png" width='400' height='500'/>
+
 ### 10. Pandas: apply()
 It is a built-in function which can effectively be used to apply a function to each value of a pandas series.
 
